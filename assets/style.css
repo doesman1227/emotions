@@ -1,6 +1,6 @@
 /* ===========================================================
    感情 — m-note.uk/emotions/
-   6つの感情を、和色と一文字の漢字で束ねるデザインシステム
+   プルチックの感情の輪(8つの基本感情)＋「欲・渇愛・執着」の独立ページ
    =========================================================== */
 
 :root{
@@ -12,12 +12,18 @@
   --line:rgba(35,33,32,.12);
   --line-strong:rgba(35,33,32,.24);
 
+  /* プルチックの8つの基本感情 */
+  --c-joy:#8E9B3C;          /* 萌黄 */
+  --c-trust:#3D6C99;        /* 縹色 */
+  --c-fear:#7C6E87;         /* 藤鼠 */
+  --c-surprise:#4E93A6;     /* 空色 */
+  --c-sadness:#4C6478;      /* 藍鼠 */
+  --c-disgust:#4F6B4D;      /* 青竹色 */
+  --c-anger:#A13D2C;        /* 緋色 */
+  --c-anticipation:#D9821F; /* 柑子色 */
+
+  /* 輪の外側：欲・渇愛・執着(独立ページ) */
   --c-desire:#C08829;   /* 金茶 */
-  --c-anger:#A13D2C;    /* 緋色 */
-  --c-sadness:#4C6478;  /* 藍鼠 */
-  --c-joy:#8E9B3C;      /* 萌黄 */
-  --c-anxiety:#7C6E87;  /* 藤鼠 */
-  --c-disgust:#4F6B4D;  /* 青竹色 */
 
   --font-serif:'Noto Serif JP', serif;
   --font-sans:'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -34,12 +40,16 @@
     --line:rgba(255,255,255,.1);
     --line-strong:rgba(255,255,255,.2);
 
-    --c-desire:#E3AA4A;
-    --c-anger:#D06B57;
-    --c-sadness:#84A0B6;
     --c-joy:#B6C463;
-    --c-anxiety:#AB9AB8;
+    --c-trust:#7CA7CE;
+    --c-fear:#AB9AB8;
+    --c-surprise:#8CC4D3;
+    --c-sadness:#84A0B6;
     --c-disgust:#84A87F;
+    --c-anger:#D06B57;
+    --c-anticipation:#F0AE5E;
+
+    --c-desire:#E3AA4A;
   }
 }
 
@@ -174,6 +184,16 @@ section{padding:88px 0}
 .emo-card .kana{font-size:.72rem;color:var(--muted);letter-spacing:.06em;margin-bottom:10px;display:block}
 .emo-card p{font-size:.9rem;color:var(--ink-soft);margin:0}
 
+/* ---------- outside-the-wheel feature (欲・渇愛・執着) ---------- */
+.outside-card{display:flex;align-items:center;gap:32px;flex-wrap:wrap;background:var(--paper-2);border:1px dashed var(--line-strong);border-radius:20px;padding:34px 32px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.outside-card:hover{border-color:var(--c-desire);transform:translateY(-2px)}
+.outside-card .glyph{font-family:var(--font-serif);font-weight:900;font-size:4.6rem;line-height:1;color:var(--c-desire);flex:0 0 auto}
+.outside-card .txt{flex:1 1 320px;min-width:240px}
+.outside-card .tag{font-size:.74rem;font-weight:700;letter-spacing:.12em;color:var(--c-desire);text-transform:uppercase;margin-bottom:8px}
+.outside-card h3{font-size:1.25rem;margin-bottom:8px}
+.outside-card p{margin:0;color:var(--ink-soft);font-size:.94rem}
+.outside-card .foot{margin-top:12px;font-size:.84rem;font-weight:700;color:var(--c-desire)}
+
 /* ---------- ring hero (index page) ---------- */
 .ring-wrap{display:flex;justify-content:center;padding:20px 0 10px}
 .ring{position:relative;width:min(560px,92vw);aspect-ratio:1/1}
@@ -186,7 +206,7 @@ section{padding:88px 0}
 .ring .node:hover .glyph{transform:scale(1.12)}
 .ring .node .label{display:block;margin-top:6px;font-size:.72rem;font-weight:600;letter-spacing:.06em;color:var(--muted)}
 @media (max-width:520px){
-  .ring{width:100%;aspect-ratio:auto;position:static;display:grid;grid-template-columns:repeat(3,1fr);gap:22px 8px;padding:6px 0}
+  .ring{width:100%;aspect-ratio:auto;position:static;display:grid;grid-template-columns:repeat(4,1fr);gap:20px 4px;padding:6px 0}
   .ring::before{display:none}
   .ring .center{display:none}
   .ring .node{position:static;transform:none}
