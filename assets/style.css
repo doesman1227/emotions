@@ -161,7 +161,9 @@ section{padding:88px 0}
 .grid{display:grid;gap:22px}
 .g-2{grid-template-columns:repeat(2,1fr)}
 .g-3{grid-template-columns:repeat(3,1fr)}
-@media (max-width:860px){.g-2,.g-3{grid-template-columns:1fr}}
+.g-4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:860px){.g-2,.g-3,.g-4{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.g-2,.g-3,.g-4{grid-template-columns:1fr}}
 
 .card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
 .card h3{font-size:1.1rem;margin-bottom:.5em}
@@ -219,6 +221,19 @@ section{padding:88px 0}
 .pillar .pn{font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--c,var(--muted));text-transform:uppercase;margin-bottom:8px}
 .pillar h4{font-size:1rem;margin-bottom:.4em}
 .pillar p{font-size:.9rem;color:var(--ink-soft);margin:0}
+
+/* ---------- chain (十二支縁起などの因果の連鎖) ---------- */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;justify-content:center}
+.chain .link{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:16px 14px;text-align:center;width:118px;display:flex;flex-direction:column;justify-content:center}
+.chain .link.key{border-color:var(--c);border-width:2px;background:transparent}
+.chain .link .jp{font-family:var(--font-serif);font-weight:700;font-size:1.05rem;color:var(--ink)}
+.chain .link .en{display:block;margin-top:4px;font-size:.68rem;color:var(--muted);letter-spacing:.02em}
+.chain .arrow{display:flex;align-items:center;justify-content:center;width:26px;color:var(--muted);font-size:1.1rem;flex:0 0 auto}
+@media (max-width:720px){
+  .chain{flex-direction:column;align-items:center}
+  .chain .link{width:100%;max-width:280px}
+  .chain .arrow{transform:rotate(90deg);width:auto;padding:2px 0}
+}
 
 /* ---------- compare table (対象 / 表面的欲望 / 背後の自己 etc.) ---------- */
 .compare{width:100%;border-collapse:collapse;margin:0}
