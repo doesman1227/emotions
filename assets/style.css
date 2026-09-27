@@ -22,8 +22,9 @@
   --c-anger:#A13D2C;        /* 緋色 */
   --c-anticipation:#D9821F; /* 柑子色 */
 
-  /* 輪の外側：欲・渇愛・執着(独立ページ) */
-  --c-desire:#C08829;   /* 金茶 */
+  /* 輪の外側：独立ページ */
+  --c-desire:#C08829;   /* 金茶 ── 苦・渇愛・執着 */
+  --c-wants:#6B4E8E;    /* 江戸紫 ── 欲の地図 */
 
   --font-serif:'Noto Serif JP', serif;
   --font-sans:'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -50,6 +51,7 @@
     --c-anticipation:#F0AE5E;
 
     --c-desire:#E3AA4A;
+    --c-wants:#A98FC7;
   }
 }
 
@@ -188,13 +190,13 @@ section{padding:88px 0}
 
 /* ---------- outside-the-wheel feature (欲・渇愛・執着) ---------- */
 .outside-card{display:flex;align-items:center;gap:32px;flex-wrap:wrap;background:var(--paper-2);border:1px dashed var(--line-strong);border-radius:20px;padding:34px 32px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
-.outside-card:hover{border-color:var(--c-desire);transform:translateY(-2px)}
-.outside-card .glyph{font-family:var(--font-serif);font-weight:900;font-size:4.6rem;line-height:1;color:var(--c-desire);flex:0 0 auto}
+.outside-card:hover{border-color:var(--c,var(--c-desire));transform:translateY(-2px)}
+.outside-card .glyph{font-family:var(--font-serif);font-weight:900;font-size:4.6rem;line-height:1;color:var(--c,var(--c-desire));flex:0 0 auto}
 .outside-card .txt{flex:1 1 320px;min-width:240px}
-.outside-card .tag{font-size:.74rem;font-weight:700;letter-spacing:.12em;color:var(--c-desire);text-transform:uppercase;margin-bottom:8px}
+.outside-card .tag{font-size:.74rem;font-weight:700;letter-spacing:.12em;color:var(--c,var(--c-desire));text-transform:uppercase;margin-bottom:8px}
 .outside-card h3{font-size:1.25rem;margin-bottom:8px}
 .outside-card p{margin:0;color:var(--ink-soft);font-size:.94rem}
-.outside-card .foot{margin-top:12px;font-size:.84rem;font-weight:700;color:var(--c-desire)}
+.outside-card .foot{margin-top:12px;font-size:.84rem;font-weight:700;color:var(--c,var(--c-desire))}
 
 /* ---------- ring hero (index page) ---------- */
 .ring-wrap{display:flex;justify-content:center;padding:20px 0 10px}
