@@ -42,7 +42,12 @@
       '</div>' +
     '</div></footer>';
 
-  document.body.insertAdjacentHTML("afterbegin", navHTML);
+  var topbar = document.querySelector(".mnote-topbar");
+  if (topbar) {
+    topbar.insertAdjacentHTML("afterend", navHTML);
+  } else {
+    document.body.insertAdjacentHTML("afterbegin", navHTML);
+  }
   document.body.insertAdjacentHTML("beforeend", footHTML);
 
   var key = document.body.getAttribute("data-nav");
