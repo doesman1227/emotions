@@ -16,7 +16,7 @@
 
   var navHTML =
     '<header class="nav" id="nav"><div class="nav-inner">' +
-    '<a class="brand" href="index.html"><small>人間の</small>感情</a>' +
+    '<a class="brand" href="index.html">感情</a>' +
     '<nav class="nav-links" id="navlinks">' +
       '<a href="index.html" data-key="home">感情の輪</a>' +
       '<a href="desire.html" data-key="desire" style="border-left:1px solid var(--line);padding-left:20px;margin-left:-4px">苦</a>' +
@@ -32,14 +32,14 @@
   var footHTML =
     '<footer><div class="wrap">' +
       '<div class="foot-grid">' +
-        '<div class="foot-brand"><div class="brand" style="font-family:var(--font-serif);font-weight:700;font-size:1.05rem">人間の感情</div>' +
+        '<div class="foot-brand"><div class="brand" style="font-family:var(--font-serif);font-weight:700;font-size:1.05rem">感情</div>' +
           '<p>プルチックの感情の輪を手がかりに、感情そのものではなく、感情と自分を同一視しないための考え方を個人的に整理したノートです。</p></div>' +
         '<div class="foot-col"><h4>感情の輪(8つ)</h4>' + footWheelLinks + '</div>' +
         '<div class="foot-col"><h4>輪の外側</h4><a href="desire.html">苦・渇愛・執着</a><a href="wants.html">欲の地図</a></div>' +
       '</div>' +
       '<div class="foot-bottom">' +
         '<p class="foot-disc">このサイトは、専門家ではない個人が、心理学のロバート・プルチックによる感情の輪の考え方や、仏教の一般的な枠組みを参照しながら、感情と執着について自分で考えたことを整理した個人的なノートです。特定の研究や統計を主張するものではなく、内容の正確性を保証するものでもありません。診断・治療・医学的助言に代わるものではありません。心身の不調がある場合は、医療機関や専門家にご相談ください。</p>' +
-        '<p class="foot-copy">© 2026 人間の感情 ／ 個人ノート ・ <a href="../">← m-note トップ</a></p>' +
+        '<p class="foot-copy">© 2026 感情 ／ 個人ノート ・ <a href="../">← m-note トップ</a></p>' +
       '</div>' +
     '</div></footer>';
 
